@@ -1,0 +1,12 @@
+<h1>Appointment Info</h1>
+<div>
+doctor - <%=link_to @appointment.doctor.name, doctor_path(@appointment.doctor_id)%>
+</div>
+<div>
+patient - <%=link_to @appointment.patient.name, patient_path(@appointment.patient_id)%>
+</div>
+<div>
+date - <%=@appointment.appointment_datetime.strftime('%B %e, %Y %k:%M') %>
+</div>
+
+<%# appointment_datetimeTime.now.strftime("%m/%d/%Y") %>
